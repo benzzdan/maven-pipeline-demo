@@ -55,7 +55,7 @@ podTemplate(
          stage ('Deploy') {
             container ('helm') {
                 sh "/helm init --client-only --skip-refresh"
-                sh "/helm upgrade --install --wait --set image.repository=wlobeos/mvn-rest-demo-v2,image.tag=${commitId} mvn-rest mvn-rest"
+                sh "/helm upgrade --install --wait --set image.repository=wlobeos/mvn-rest-demo-v2,image.tag=${commitId} mvn-generator-rest mvn-generator-rest"
             }
         }
 
