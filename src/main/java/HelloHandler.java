@@ -9,13 +9,11 @@ import java.io.IOException;
 public class HelloHandler extends AbstractHandler {
 
     public void handle(String target, Request baseRequest, HttpServletRequest request, HttpServletResponse response)
-                throws IOException, ServletException
-        {
-            response.setContentType("text/html;charset=utf-8");
-            response.setStatus(HttpServletResponse.SC_OK);
-            baseRequest.setHandled(true);
-            response.getWriter().println("<h1>Welcome to the jungle, this is what we are!</h1>");
+            throws IOException, ServletException {
+        response.setContentType("text/html;charset=utf-8");
+        response.setStatus(HttpServletResponse.SC_OK);
+        baseRequest.setHandled(true);
+        response.getWriter().println("<h1>Welcome to the jungle!</h1>");
 
-        }
+    }
 }
-
