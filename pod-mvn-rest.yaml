@@ -6,6 +6,8 @@ spec:
   containers:
   - name: memory-demo-ctr
     image: iad.ocir.io/aiapps0/helm_charts_poc/mvn-rest
+    imagePullSecrets:
+    - name: my-secret-aiapps0
     resources:
       limits:
         memory: "200Mi"
