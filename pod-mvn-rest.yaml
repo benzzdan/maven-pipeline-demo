@@ -6,12 +6,5 @@ spec:
   containers:
     - name: test-container
       image: iad.ocir.io/aiapps0/helm_charts_poc/mvn-rest:latest
-      volumeMounts:
-          # name must match the volume name below
-          - name: secret-volume
-            mountPath: /etc/secret-volume
-  # The secret data is exposed to Containers in the Pod through a Volume.
-  volumes:
-    - name: secret-volume
-      secret:
-        secretName: test-secret
+      imagePullSecrets:
+      — name: my-secret-aiapps0
