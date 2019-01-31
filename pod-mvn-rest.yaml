@@ -13,5 +13,5 @@ spec:
         memory: "100Mi"
     command: ["stress"]
     args: ["--vm", "1", "--vm-bytes", "150M", "--vm-hang", "1"]
-imagePullSecrets:
-- name: my-secret-aiapps0
+  imagePullSecrets:
+  - name: my-secret-aiapps0
